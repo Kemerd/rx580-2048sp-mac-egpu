@@ -1,0 +1,11 @@
+# VBIOS images stay off GitHub. Patch your own dump.
+*.rom
+*.bin
+backups/
+
+# The flash tool is AMD's, fetch it yourself
+amdvbflash
+
+# Noise
+.DS_Store
+__pycache__/

@@ -1,0 +1,63 @@
+2026-11-13 23:32:26 ==== auto_flash started ====
+2026-11-13 23:32:26 waiting for 1002:6fdf to appear on the PCI bus
+2026-11-13 23:38:25 card appeared: 81:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Polaris 20 XL [Radeon RX 580 2048SP] [1002:6fdf] (rev ef) 81:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere HDMI Audio [Radeon RX 470/480 / 570/580/590] [1002:aaf0] 
+2026-11-13 23:38:33 unbinding snd_hda_intel from 0000:81:00.1
+2026-11-13 23:38:33 note: a GPU driver module is loaded
+2026-11-13 23:38:33 + amdvbflash -i
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+
+adapter seg  bn dn dID       asic           flash      romsize test    bios p/n    
+======= ==== == == ==== =============== ============== ======= ==== ================
+   0    0000 81 00 6FDF Polaris20       M25P40/c         80000 pass       -
+2026-11-13 23:38:34   exit code 0
+2026-11-13 23:38:34 + amdvbflash -s 0 /home/ubuntu/egpu/backups/precheck_1.bin
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+0x80000 bytes saved, checksum = 0x6A01
+2026-11-13 23:38:35   exit code 0
+2026-11-13 23:38:35 pre-flash dump 1 matches stock
+2026-11-13 23:38:45 + amdvbflash -s 0 /home/ubuntu/egpu/backups/precheck_2.bin
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+0x80000 bytes saved, checksum = 0x6A01
+2026-11-13 23:38:46   exit code 0
+2026-11-13 23:38:46 pre-flash dump 2 matches stock
+2026-11-13 23:38:56 + amdvbflash -s 0 /home/ubuntu/egpu/backups/precheck_3.bin
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+0x80000 bytes saved, checksum = 0x6A01
+2026-11-13 23:38:57   exit code 0
+2026-11-13 23:38:57 pre-flash dump 3 matches stock
+2026-11-13 23:39:07 FLASHING patched ROM
+2026-11-13 23:39:07 + amdvbflash -unlockrom 0
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+ROM Unlocked
+2026-11-13 23:39:07   exit code 0
+2026-11-13 23:39:07 + amdvbflash -p 0 /home/ubuntu/egpu/backups/patched_20261113_225229.rom
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+Old SSID: 0B31
+New SSID: 0B31
+Old P/N: xxx-xxx-xxx
+New P/N: xxx-xxx-xxx
+Old DeviceID: 6FDF
+New DeviceID: 67DF
+Old Product Name: D00034 Polaris20 XL A1 GDDR5 300e/400m 
+New Product Name: D00034 Polaris20 XL A1 GDDR5 300e/400m 
+Old BIOS Version: 015.050.002.001.000000
+New BIOS Version: 015.050.002.001.000000
+Flash type: M25P40/c
+Burst size is 256 
+80000/80000h bytes programmed
+80000/80000h bytes verified
+
+Restart System To Complete VBIOS Update.
+2026-11-13 23:39:16   exit code 0
+2026-11-13 23:39:16 + amdvbflash -s 0 /home/ubuntu/egpu/backups/readback_after_flash.rom
+AMDVBFLASH version 4.71, Copyright (c) 2020 Advanced Micro Devices, Inc.
+
+0x80000 bytes saved, checksum = 0x69F9
+2026-11-13 23:39:17   exit code 0
+2026-11-13 23:39:17 RESULT: SUCCESS - readback matches the patched ROM. Power-cycle the enclosure, then boot macOS.
