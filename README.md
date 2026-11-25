@@ -43,6 +43,7 @@ to handle the graphics workload.
 I originally tried to solve this without flashing the card. That approach did
 make macOS recognize the GPU as an RX 570 and preserved all 8 GB of VRAM, but
 it was not a complete solution.
+
 ---
 
 ## TL;DR
