@@ -17,22 +17,32 @@ Metal-accelerated, display-driving eGPU on an Intel Mac. No kexts. No OpenCore. 
 </div>
 
 ---
-What I used:
+## What I Used
 
-dock $150 https://a.co/d/0j7J8uFD
-Soyo RX580 $129 https://a.co/d/06JGa795
-Be quiet! 750W $69 https://a.co/d/060p7X02
-Or whatever old PSU you got laying around
+| Component | Details |
+|---|---|
+| Thunderbolt 3 dock | [USB4/eGPU enclosure](https://a.co/d/0j7J8uFD) — $150 |
+| Graphics card | [SOYO RX 580 2048SP](https://a.co/d/06JGa795) — $129 |
+| Power supply | [be quiet! 750W](https://a.co/d/060p7X02) — $69 |
+| RAM | 32 GB |
+| Mac | Mac mini 2018 with an i3-8100 |
+| | |
+| **Total** | **$348 USD** |
 
-Total $348 USD. May be cheaper on AliExpress.
+You can also use an existing PSU or source the parts more cheaply from AliExpress.
 
-Make sure the eGPU supports Thunderbolt. The dock was the cheapest I found that actually worked. I must have bought and returned many other docks, some even more expensive.
+The enclosure must support Thunderbolt. This was the cheapest dock I found that
+actually worked, after trying and returning several others—including more
+expensive models.
 
-With i3-8100 Intel Mac, 32GB ram (I upgraded the RAM long before prices spiked fortunately)
+I upgraded to 32 GB of RAM long before prices spiked. I mainly use this machine
+as a build box for Mac and iOS apps, but I also wanted to drive my spare
+ultrawide monitor at a high refresh rate with HDR. Now the CPU no longer needs
+to handle the graphics workload.
 
-I use this primarily for being a build box for Mac and iOS apps, but I wanted to be able to drive my spare ultrawide monitor at high refresh rate HDR without it dying. Now that the CPU doesn’t need to divert RAM and compute to drive the display, performance is great for just about anything I’ve needed even heavy development work and compiles.
-
-Tried to crack this problem without needing to flash the card, and made some progress, but this method simply makes it pose as an RX 570, the 8GB VRAM still works!
+I originally tried to solve this without flashing the card. That approach did
+make macOS recognize the GPU as an RX 570 and preserved all 8 GB of VRAM, but
+it was not a complete solution.
 ---
 
 ## TL;DR
