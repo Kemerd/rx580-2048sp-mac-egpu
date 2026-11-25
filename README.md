@@ -17,6 +17,23 @@ Metal-accelerated, display-driving eGPU on an Intel Mac. No kexts. No OpenCore. 
 </div>
 
 ---
+What I used:
+
+dock $150 https://a.co/d/0j7J8uFD
+Soyo RX580 $129 https://a.co/d/06JGa795
+Be quiet! 750W $69 https://a.co/d/060p7X02
+Or whatever old PSU you got laying around
+
+Total $348 USD. May be cheaper on AliExpress.
+
+Make sure the eGPU supports Thunderbolt. The dock was the cheapest I found that actually worked. I must have bought and returned many other docks, some even more expensive.
+
+With i3-8100 Intel Mac, 32GB ram (I upgraded the RAM long before prices spiked fortunately)
+
+I use this primarily for being a build box for Mac and iOS apps, but I wanted to be able to drive my spare ultrawide monitor at high refresh rate HDR without it dying. Now that the CPU doesn’t need to divert RAM and compute to drive the display, performance is great for just about anything I’ve needed even heavy development work and compiles.
+
+Tried to crack this problem without needing to flash the card, and made some progress, but this method simply makes it pose as an RX 570, the 8GB VRAM still works!
+---
 
 ## TL;DR
 
